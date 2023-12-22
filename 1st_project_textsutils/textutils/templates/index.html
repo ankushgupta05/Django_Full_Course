@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+
+    <title>Templates working </title>
+</head>
+<body>
+    <p>My name is ankush gupta</p>
+    <h1>Welcome to the text analysis . Enter your text below :</h1>
+    <form action='/analyze' method='post'>
+        {% csrf_token %}
+        <textarea name='text' style='width: 959px; height: 211px;'></textarea><br>
+        <input type="checkbox" name="removepunc">Remove punctuations mark </input><br>
+        <input type="checkbox" name="fullcaps">CONVERT UPPERCASE</input><br>
+        <input type="checkbox" name="newlineremover">New line Remover</input><br>
+        <input type="checkbox" name="extraspaceremover">Extra Spaces Remover</input><br>
+        <button type="submit" >analyze text</button>
+    </form>
+</body>
+</html>
