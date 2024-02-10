@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+
+  <title>  {% block title %}{% endblock %} </title>
+  
+  
+<style>
+      body {
+        background-color: #d8d8d8;
+        font-family: sans-serif;
+      }
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+      /*  padding: 0px 20px; */
+        padding: 0px 5px 0px 20px;
+        align-items: center;
+        height: 50px;
+        background-color: rgb(18, 18, 62);
+      }
+      
+      nav ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      
+      nav ul li {
+        list-style: none;
+        margin: 0px 15px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      
+      nav ul li a:hover {
+        color: rgb(153, 153, 226);
+        font-size: 1.01rem;
+      }
+      .left {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+      }
+
+      /* CSS of another template */
+      
+      {% block css %}  {% endblock %}
+
+
+    </style>
+    {% comment %} <div id="fb-root"></div> {% endcomment %}
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0" nonce="HrLu6sek"></script>
+</head>
+  
+  
+<body>
+  <!-- Here load static is Declara -->
+    {% comment %} {% load static %} {% endcomment %}
+
+  <header>
+      <nav>
+        <div class="left">My-Awesome Shoping-web</div>
+        <div class="right">
+          <ul>
+            <li>
+              <a href="/shop">Home</a>
+            </li>
+            <li>
+              <a href="/shop/about">About Us</a>
+            </li>
+            <li>
+              <a href="/shop/tracker">Tracker</a>
+            </li>
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/shop/contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button type="button" class="btn btn-secondary mx-2" id="popcart" data-bs-container="body" data-bs-toggle="popover" data-bs- 
+           placement="bottom" data-html="true" data-bs-content="Bottom popover">Cart(<span id="cart">0</span>)</button>
+        </form>
+      </nav>
+    </header>
+    <!-- Here boby of another -->
+    
+    {% block body %}   {% endblock %}
+    
+    
+    
+    <!--
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    replace jQuery  of uncompressed latest version  from these url.
+    https://releases.jquery.com/ 
+    -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256- eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+    
+    <!-- Here js adding -->
+
+    {% block js %}   {% endblock %}
+    
+
+  </body>
+</html>
